@@ -15,7 +15,7 @@ const AppNavBar = () => {
         <Toolbar disableGutters>
           <Typography variant="h6" noWrap>
             <MuiLink underline="none" component={Link} to="/" color="#fff">
-              ProfileBuilder
+              UserManager
             </MuiLink>
           </Typography>
         </Toolbar>
