@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+## USER MANAGER APP - UserManager.io
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a User Manager application built using [React](https://reactjs.org/) and [Redux](https://redux.js.org/) for the front-end processes and consumed APIs from [Free fake API ](https://jsonplaceholder.typicode.com) for retrieving and manipulating user data.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Built With](#built-with)
+- [Live Preview](#live-preview)
+- [Required Installations](#required-installations)
+- [Instalation of This App](#instalation)
+- [License](#license)
+- [Authors](#authors)
+- [Acknowledgements](#acknowledgements)
 
-### `npm start`
+### Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Redux
+- MaterialUI
+- Webpack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- LIVE PREVIEW -->
 
-### `npm test`
+## Live Preview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is the link to the live preview. Feel free to visit.<br>
 
-### `npm run build`
+Live version of the project: [User Manager App](https://user-managr.netlify.app/)<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- REQUIRED INSTALLATION -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Required Installations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p>If you want a copy of this project running on your machine you have to install:</p>
 
-### `npm run eject`
+- <a href="https://nodejs.org/en/">Node.js (v5. 2.0 or greater)</a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- INSTALLATION -->
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation of This App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Once you have installed the required package shown on the [Required Installations](#required-installations), proceed with the following steps
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the Repository,
 
-## Learn More
+```Shell
+your@pc:~$ git clone https://github.com/adaorachi/user_manager
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Move into the downloaded folder
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```Shell
+your@pc:~$ cd user_manager
+```
 
-### Code Splitting
+Get the dependencies needed for the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```Shell
+your@pc:~$ npm install
+```
 
-### Analyzing the Bundle Size
+Start the server and use the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```Shell
+your@pc:~$ npm start
+```
 
-### Making a Progressive Web App
+<!-- LICENSE -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+Distributed under the MIT License. See `LICENSE` for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- CONTACT -->
 
-### Deployment
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+MaryAnn Chukwuka
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Github: [@adaorachi](https://github.com/adaorachi)
+- Linkedin: [MaryAnn Chukwuka](https://www.linkedin.com/in/adaorachi/)
