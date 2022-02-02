@@ -1,10 +1,4 @@
-import {
-  getUsers,
-  addUser,
-  updateUser,
-  deleteUser,
-  sortUser,
-} from '../../queries';
+import { getUsers, addUser, updateUser, deleteUser, sortUser } from '../../api';
 
 export const fetchUsers = (params) => {
   return (dispatch) => {
