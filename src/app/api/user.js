@@ -1,15 +1,12 @@
 import * as i from './lib';
-
-const userEndpoint =
-  'https://my-json-server.typicode.com/karolkproexe/jsonplaceholderdb/data';
-const placeHolder = 'https://jsonplaceholder.typicode.com/users';
+import url from './urls';
 
 export const getUsers = (dispatch, params) => {
   const { setIsLoading } = params;
 
   setIsLoading(true);
   i.axios
-    .get(userEndpoint)
+    .get(url.getUserURL)
     .then((res) => {
       const getUsers = res.data.map((d) => ({
         id: d.id,
@@ -38,7 +35,7 @@ export const addUser = ({ dispatch, getState }, params) => {
   const addedUser = { ...userValues, id: getUsers.length + 1 };
 
   i.axios
-    .post(`${placeHolder}`, addedUser, {
+    .post(`${url.placeHolderURL}`, addedUser, {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -64,7 +61,7 @@ export const updateUser = ({ dispatch, getState }, params) => {
   setIsSubmitting(true);
 
   i.axios
-    .patch(`${placeHolder}/${userId}`, userValues, {
+    .patch(`${url.placeHolderURL}/${userId}`, userValues, {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
@@ -92,14 +89,14 @@ export const updateUser = ({ dispatch, getState }, params) => {
 };
 
 export const deleteUser = ({ dispatch, getState }, params) => {
-  const { id, setIsDeleting, setIsDeleted } = params;
+  const { userId, setIsDeleting, setIsDeleted } = params;
 
   setIsDeleting(true);
   i.axios
-    .delete(`${placeHolder}/${id}`)
+    .delete(`${url.placeHolderURL}/${userId}`)
     .then(() => {
       const { getUsers } = getState()?.user;
-      const updatedUsers = getUsers?.filter((u) => u.id !== id);
+      const updatedUsers = getUsers?.filter((u) => u.id !== userId);
 
       dispatch({ type: i.constants.DELETE_USER, payload: updatedUsers });
       setIsDeleting(false);

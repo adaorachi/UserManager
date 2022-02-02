@@ -18,7 +18,7 @@ export const fetchUpdatedUser = (params) => {
   };
 };
 
-export const deleteAUser = (params) => {
+export const fetchUnDeletedUser = (params) => {
   return (dispatch, getState) => {
     deleteUser({ dispatch, getState }, params);
   };

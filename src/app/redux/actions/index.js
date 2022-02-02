@@ -2,6 +2,6 @@ export {
   fetchUsers,
   fetchAddedUser,
   fetchUpdatedUser,
-  deleteAUser,
+  fetchUnDeletedUser,
   fetchSortedUser,
 } from './user';

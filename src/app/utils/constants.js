@@ -4,3 +4,13 @@ export const FIELDLIST = [
   { label: 'Username', name: 'username', type: 'text' },
   { label: 'City', name: 'city', type: 'text' },
 ];
+
+export const TABLEHEADER = [
+  'ID',
+  'Name',
+  'Username',
+  'Email',
+  'City',
+  'Edit',
+  'Delete',
+];

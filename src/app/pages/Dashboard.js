@@ -6,17 +6,8 @@ import { ArrowDropUp, ArrowDropDown } from '@mui/icons-material';
 
 import { PopupMessage, Button, Table } from '../components';
 import { PageContainer } from '../shared';
-import { deleteAUser, fetchSortedUser } from '../redux/actions';
-
-const tableHeader = [
-  'ID',
-  'Name',
-  'Username',
-  'Email',
-  'City',
-  'Edit',
-  'Delete',
-];
+import { fetchUnDeletedUser, fetchSortedUser } from '../redux/actions';
+import { TABLEHEADER } from '../utils/constants';
 
 const EditAction = ({ user }) => (
   <Button
@@ -36,9 +27,7 @@ export default function Dashboard() {
   const [userId, setUserId] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
-
   const [sortBy, setSortBy] = useState('asc');
-
   const [openPopup, setOpenPopUp] = useState(false);
 
   const dispatch = useDispatch();
@@ -61,8 +50,8 @@ export default function Dashboard() {
     if (isDeleted) setOpenPopUp(false);
   }, [isDeleted]);
 
-  const handleDeleteUser = (id) => {
-    dispatch(deleteAUser({ id, setIsDeleting, setIsDeleted }));
+  const handleDeleteUser = (userId) => {
+    dispatch(fetchUnDeletedUser({ userId, setIsDeleting, setIsDeleted }));
   };
 
   const handleSortUser = () => {
@@ -111,7 +100,7 @@ export default function Dashboard() {
           <Button component={Link} to={'/create-user'} label="Add user" />
         </Box>
 
-        <Table tableHeader={tableHeader} tableRowData={tableRowData} />
+        <Table tableHeader={TABLEHEADER} tableRowData={tableRowData} />
       </PageContainer>
       {userId && openPopup && (
         <PopupMessage

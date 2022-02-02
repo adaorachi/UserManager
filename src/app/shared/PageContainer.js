@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Paper, Box, Typography } from '@mui/material';
-import { NavBar, Footer } from './index';
+import { NavBar, Footer } from './';
 
 export default function PageContainer({ children, pageTitle }) {
   return (
